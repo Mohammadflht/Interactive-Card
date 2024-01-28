@@ -1,0 +1,10 @@
+/* Add this media query for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container>.right-side,
+    .container>.left-side {
+        width: 100%;
+    }
+}
