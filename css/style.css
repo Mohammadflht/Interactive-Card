@@ -10,15 +10,39 @@ a {
     width: 100%;
     height: 100vh;
     display: flex;
+    /* position: relative; */
 }
 .container>.right-side {
     width: 33.33%;
     height: 100vh;
     background-image: url("/images/bg-main-desktop.png");
     background-size: cover;
+    position: relative;
 }
 .container>.left-side {
     width: 66.66%;
     height: 100vh;
 }
 
+/* Start front and back of card */
+
+.card_front {
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    background-image: url("/images/bg-card-front.png");
+    background-size: cover;
+    position: absolute;
+    right: -120px;
+    top: 140px;
+}
+.card_back {
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    background-image: url("/images/bg-card-back.png");
+    background-size: cover;
+    position: absolute;
+    right: -200px;
+    top: 390px;
+}

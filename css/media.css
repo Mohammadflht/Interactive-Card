@@ -7,4 +7,13 @@
     .container>.left-side {
         width: 100%;
     }
+    .card_front {
+        top: 180px;
+        left: 20px;
+        z-index: 1;
+    }
+    .card_back {
+        top: 56px;
+        left: 100px;
+    }
 }
