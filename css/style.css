@@ -24,9 +24,9 @@ a {
     height: 100vh;
 }
 
-/* Start front and back of card */
+/* Start front of card */
 
-.card_front {
+.card-front {
     width: 400px;
     height: 220px;
     border-radius: 10px;
@@ -36,7 +36,24 @@ a {
     right: -120px;
     top: 140px;
 }
-.card_back {
+.card-front-logo, .card-front-details {
+    width: 100%;
+    height: 50%;
+    border-radius: inherit;
+}
+.card-front-logo {
+    position: relative;
+}
+.card-logo {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+
+
+/* Start back of card */
+.card-back {
     width: 400px;
     height: 220px;
     border-radius: 10px;
