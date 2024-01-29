@@ -1,7 +1,12 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url('/Font/SpaceGrotesk-regular.ttf');
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Space Grotesk";
 }
 a {
     text-decoration: none;
@@ -49,7 +54,24 @@ a {
     left: 30px;
     top: 30px;
 }
-
+.card-front-details-number, .card-fron-details-name-exp {
+    width: 100%;
+    height: 50%;
+}
+.card-front-details-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-number>p {
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+}
+.card-number>p:nth-child(4), p:nth-child(8), p:nth-child(12) {
+    margin-right: 10px;
+}
 
 
 /* Start back of card */
