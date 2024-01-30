@@ -96,3 +96,19 @@ a {
     right: -200px;
     top: 390px;
 }
+.card-back-clone {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.card-cvc {
+    color: #efefef;
+    width: 10%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 44px;
+    top: 45.2%;
+}
