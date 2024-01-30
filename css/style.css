@@ -8,6 +8,9 @@
     box-sizing: border-box;
     font-family: "Space Grotesk";
 }
+body {
+    background-color: #efefef;
+}
 a {
     text-decoration: none;
 }
@@ -65,12 +68,20 @@ a {
 }
 .card-number>p {
     display: inline-block;
-    color: #fff;
+    color: #efefef;
     font-weight: 500;
     font-size: 24px;
 }
 .card-number>p:nth-child(4), p:nth-child(8), p:nth-child(12) {
     margin-right: 10px;
+}
+.card-fron-details-name-exp {
+    color: #efefef;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 31px;
 }
 
 
