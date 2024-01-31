@@ -119,9 +119,10 @@ a {
 /* Start Right side */
 .form-main {
     /* background-color: darkgrey; */
-    width: 300px;
-    height: 300px;
+    width: 360px;
+    height: 360px;
     padding: 12px;
+    margin-top: 36px;
 }
 .full-width {
     width: 100%;
@@ -146,3 +147,62 @@ a {
 .form-base>input::placeholder {
     color: hsl(270, 3%, 47%);
 }
+.namedate-part {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+.namedate-part-left {
+    width: 50%;
+    display: flex;
+    font-size: 10px;
+}
+.namedate-part-left input {
+    width: 90%;
+    margin-top: 4px;
+    outline: none;
+    border-radius: 6px;
+    border: 2px solid hsl(270, 3%, 87%);
+    height: 34px;
+    padding: 8px 8px;
+}
+.namedate-part-left input::placeholder {
+    color: hsl(270, 3%, 47%);
+}
+.namedate-part-right {
+    width: 50%;
+    padding-left: 12px;
+    font-size: 10px;
+}
+.namedate-part-right input {
+    width: 100%;
+    outline: none;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 2px solid hsl(270, 3%, 87%);
+    height: 34px;
+    padding: 8px 8px;
+}
+.namedate-part-right input::placeholder {
+    color: hsl(270, 3%, 47%);
+}
+.confirm-bottom {
+    width: 100%;
+    height: 36px;
+    margin-top: 28px;
+    background-color: lightcyan;
+}
+.confirm-bottom button {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: hsl(278, 68%, 11%);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+

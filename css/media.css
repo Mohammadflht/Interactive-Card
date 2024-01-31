@@ -1,5 +1,5 @@
 /* Add this media query for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 1048px) {
     .container {
         flex-direction: column;
     }
