@@ -1,5 +1,5 @@
 /* Add this media query for mobile devices */
-@media (max-width: 1048px) {
+@media (max-width: 1124px) {
     .container {
         flex-direction: column;
     }
@@ -15,5 +15,13 @@
     .card-back {
         top: 56px;
         left: 100px;
+    }
+    .form-main {
+        width: 80%;
+    }
+}
+@media (max-width: 668px) {
+    .form-main {
+        width: 100%;
     }
 }
