@@ -59,17 +59,33 @@
         </section>
       </section>
       <section class="right-side">
+
         <section class="form-main">
           <div class=" form-base"><label for="#">CARDHOLDER NAME</label><input type="text" placeholder="e.g. Jane Appleseed"></div>
-          <div class=" form-base"><label for="#">CARD NUMBER</label><input type="text" placeholder="e.g.1234 5678 9123 0000"></div>
+          <div class=" form-base"><label for="#">CARD NUMBER</label><input type="text" placeholder="e.g.1234 5678 9123 0000"><p class="errorMessage">Wrong format, number only</p></div>
           <div class="namedate-part">
             <div class="namedate-part-left">
-              <div><label for="#">EXP. DATE</label><input type="text" placeholder="MM"></div>
+              <div><label for="#">EXP. DATE</label><input type="text" placeholder="MM">
+                <p class="errorMessage">Can't be blank</p>
+              </div>
               <div><label for="#">(MM/YY)</label><input type="text" placeholder="YY"></div>
             </div>
-            <div class="namedate-part-right"><label for="#">CVC</label><input type="text" placeholder="e.g. 123"></div>
+            <div class="namedate-part-right"><label for="#">CVC</label><input type="text" placeholder="e.g. 123">
+              <p class="errorMessage">Can't be blank</p>
+            </div>
           </div>
-          <div class="confirm-bottom"><button>Confirm</button></div>
+          <div class="button"><button>Confirm</button></div>
+        </section>
+
+        <section class="complete-state">
+          <div class="complete-logo">
+            <img src="images/icon-complete.svg" alt="Complete state logo" draggable="false" width="70" height="70">
+          </div>
+          <div class="complete-message">
+            <p>THANK YOU!</p>
+            <p>We've added your card details</p>
+          </div>
+          <div class="button"><button>Continue</button></div>
         </section>
       </section>
     </section>
