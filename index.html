@@ -61,16 +61,16 @@
       <section class="right-side">
 
         <section class="form-main">
-          <div class=" form-base"><label for="#">CARDHOLDER NAME</label><input type="text" placeholder="e.g. Jane Appleseed"></div>
+          <div class=" form-base"><label for="#">CARDHOLDER NAME</label><input id="cardholder" type="text" placeholder="e.g. Jane Appleseed" maxlength="30"></div>
           <div class=" form-base"><label for="#">CARD NUMBER</label><input id="card-number" type="text" placeholder="e.g.1234 5678 9123 0000"><p class="errorMessage">Wrong format, number only</p></div>
           <div class="namedate-part">
             <div class="namedate-part-left">
-              <div><label for="#">EXP. DATE</label><input type="text" placeholder="MM">
+              <div><label for="#">EXP. DATE</label><input type="text" placeholder="MM" maxlength="2">
                 <p class="errorMessage">Can't be blank</p>
               </div>
-              <div><label for="#">(MM/YY)</label><input type="text" placeholder="YY"></div>
+              <div><label for="#">(MM/YY)</label><input type="text" placeholder="YY" maxlength="2"></div>
             </div>
-            <div class="namedate-part-right"><label for="#">CVC</label><input type="text" placeholder="e.g. 123">
+            <div class="namedate-part-right"><label for="#">CVC</label><input type="text" placeholder="e.g. 123" maxlength="3">
               <p class="errorMessage">Can't be blank</p>
             </div>
           </div>
