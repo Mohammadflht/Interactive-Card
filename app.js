@@ -1,3 +1,10 @@
+let inputs = document.querySelectorAll('input');
+window.onload = function() {
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = "";
+    }
+};
+
 // Select the input element
 let input = document.querySelector('.form-base #card-number');
 
