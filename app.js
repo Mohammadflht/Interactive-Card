@@ -9,6 +9,9 @@ input.addEventListener('input', function() {
     // Get the value of the input field
     let inputValue = this.value.replace(/\s/g, ''); // Remove spaces
 
+    // Add spaces after every 4 digits for readability
+    this.value = inputValue.replace(/(\d{4})/g, '$1 ').trim();
+
     // Loop through all the 'p' elements
     for (let i = 0; i < cardNumbers.length; i++) {
         if (i < inputValue.length) {
@@ -20,6 +23,7 @@ input.addEventListener('input', function() {
         }
     }
 });
+
 
 // Select the input element for the cardholder's name
 let inputName = document.querySelector('.form-base #cardholder');
