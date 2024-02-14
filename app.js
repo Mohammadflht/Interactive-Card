@@ -45,17 +45,21 @@ inputName.addEventListener('input', function() {
     }
 });
 
-// Select the input elements for the expiration month and year
 let inputMonth = document.querySelector('.namedate-part-left div:nth-child(1) input');
 let inputYear = document.querySelector('.namedate-part-left div:nth-child(2) input');
-
-// Select the 'p' element inside the 'card-exp-date' div
 let cardExpDate = document.querySelector('.card-exp-date p');
 
 // Add an event listener to the input field for the expiration month
 inputMonth.addEventListener('input', function() {
     // Get the value of the input field
     let inputMonthValue = this.value;
+
+    // Check if the entered value is greater than 12
+    if (inputMonthValue > 12) {
+        // If it is, set the value to 12
+        this.value = '12';
+        inputMonthValue = '12';
+    }
 
     // Get the current value of the card's expiration date
     let currentExpDate = cardExpDate.textContent.split('/');
