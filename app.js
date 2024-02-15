@@ -6,7 +6,7 @@ window.onload = function() {
 };
 
 // Select the input element
-let input = document.querySelector('.form-base #card-number');
+let inputNumber = document.querySelector('.form-base #card-number');
 
 // Select the next input element
 let nextInput = document.querySelector('.namedate-part-left div:nth-child(1) input'); // Replace this with the correct selector for your next input field
@@ -15,17 +15,17 @@ let nextInput = document.querySelector('.namedate-part-left div:nth-child(1) inp
 let cardNumbers = document.querySelectorAll('.card-number p');
 
 // Add an event listener to the input field
-input.addEventListener('input', function() {
+inputNumber.addEventListener('input', function() {
     // Get the value of the input field
     let inputValue = this.value.replace(/\s/g, ''); // Remove spaces
 
-    // Add spaces after every 4 digits for readability
-    this.value = inputValue.replace(/(\d{4})/g, '$1 ').trim();
+    // Add spaces after every 4 characters for readability
+    this.value = inputValue.replace(/(.{4})/g, '$1 ').trim();
 
     // Loop through all the 'p' elements
     for (let i = 0; i < cardNumbers.length; i++) {
         if (i < inputValue.length) {
-            // If there is a number for this 'p' element, update its text
+            // If there is a character for this 'p' element, update its text
             cardNumbers[i].textContent = inputValue[i];
         } else {
             // Otherwise, set the text to '0'
@@ -33,11 +33,12 @@ input.addEventListener('input', function() {
         }
     }
 
-    // If all numbers have been typed, move focus to the next input field
+    // If all characters have been typed, move focus to the next input field
     if (inputValue.length === 16) {
         nextInput.focus();
     }
 });
+
 
 
 
