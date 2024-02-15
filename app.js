@@ -133,3 +133,59 @@ inputCVC.addEventListener('input', function() {
 });
 
 
+let mounthYearError = document.getElementById('mounthYearError');
+let cardNumberEmptyError = document.getElementById('cardNumberEmptyError');
+let cardNumberFormatError = document.getElementById('cardNumberFormatError');
+let cardCvcError = document.getElementById('cardCvcError');
+let confirmButton = document.getElementById('confirmButton');
+let continueButton = document.getElementById('continueButton');
+let completeState = document.querySelector('.complete-state');
+let formMain = document.querySelector('.form-main');
+
+confirmButton.addEventListener('click', function() {
+    let isError = false;
+    if (!/^[0-9\s]*$/.test(inputNumber.value) || inputNumber.value.length < 19) {
+        cardNumberFormatError.style.display = "block";
+        cardNumberEmptyError.style.display = "none";
+        isError = true;
+    }else {
+        cardNumberFormatError.style.display = "none";
+    }
+    if (inputNumber.value.length === 0) {
+        cardNumberEmptyError.style.display = "block";
+        cardNumberFormatError.style.display = "none";
+        isError = true;
+    }else {
+        cardNumberEmptyError.style.display = "none";
+    }
+    if ((inputMonth.value.length === 0) || (inputYear.value.length === 0)) {
+        mounthYearError.style.display = "block";
+        isError = true;
+    }else {
+        mounthYearError.style.display = "none";
+    }
+    if (inputCVC.value.length === 0) {
+        cardCvcError.style.display = "block";
+        isError = true;
+    }else {
+        cardCvcError.style.display = "none";
+    }
+
+    // if there is no error at all ==> the complete state will appear
+    if (!isError) {
+        completeState.style.display = "block";
+        formMain.style.display = "none";
+    }
+    
+    console.log(isError);
+});
+
+continueButton.addEventListener('click', function() {
+    completeState.style.display = "none";
+    formMain.style.display = "block";
+});
+
+
+
+
+
