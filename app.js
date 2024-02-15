@@ -8,6 +8,9 @@ window.onload = function() {
 // Select the input element
 let input = document.querySelector('.form-base #card-number');
 
+// Select the next input element
+let nextInput = document.querySelector('.namedate-part-left div:nth-child(1) input'); // Replace this with the correct selector for your next input field
+
 // Select all the 'p' elements inside the 'card-number' div
 let cardNumbers = document.querySelectorAll('.card-number p');
 
@@ -29,7 +32,13 @@ input.addEventListener('input', function() {
             cardNumbers[i].textContent = '0';
         }
     }
+
+    // If all numbers have been typed, move focus to the next input field
+    if (inputValue.length === 16) {
+        nextInput.focus();
+    }
 });
+
 
 
 // Select the input element for the cardholder's name
@@ -42,7 +51,7 @@ let cardName = document.querySelector('.card-name p');
 inputName.addEventListener('input', function() {
     // Get the value of the input field
     let inputValue = this.value.toUpperCase(); // Convert to uppercase
-
+    
     // Update the cardName text
     if (inputValue) {
         cardName.textContent = inputValue;
@@ -60,29 +69,34 @@ let cardExpDate = document.querySelector('.card-exp-date p');
 inputMonth.addEventListener('input', function() {
     // Get the value of the input field
     let inputMonthValue = this.value;
-
+    
     // Check if the entered value is greater than 12
     if (inputMonthValue > 12) {
         // If it is, set the value to 12
         this.value = '12';
         inputMonthValue = '12';
     }
-
+    
     // Get the current value of the card's expiration date
     let currentExpDate = cardExpDate.textContent.split('/');
-
+    
     // Update the month in the card's expiration date
     currentExpDate[0] = inputMonthValue ? inputMonthValue.padStart(2, '0') : '00';
-
+    
     // Update the card's expiration date
     cardExpDate.textContent = currentExpDate.join('/');
+    
+    // If inputMounth have been typed, move focus to the inputYear field
+    if (inputMonthValue.length === 2) {
+        inputYear.focus();
+    }
 });
 
 // Add an event listener to the input field for the expiration year
 inputYear.addEventListener('input', function() {
     // Get the value of the input field
     let inputYearValue = this.value;
-
+    
     // Get the current value of the card's expiration date
     let currentExpDate = cardExpDate.textContent.split('/');
 
@@ -91,6 +105,10 @@ inputYear.addEventListener('input', function() {
 
     // Update the card's expiration date
     cardExpDate.textContent = currentExpDate.join('/');
+
+    if (inputYearValue.length === 2) {
+        document.querySelector('.namedate-part-right input').focus();
+    }
 });
 
 // Select the input element for the CVC
