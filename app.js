@@ -183,10 +183,27 @@ confirmButton.addEventListener('click', function() {
 continueButton.addEventListener('click', function() {
     completeState.style.display = "none";
     formMain.style.display = "block";
+
+    // Select all input elements
     let inputs = document.querySelectorAll('input');
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].value = "";
     }
+
+    // Reset the card details
+    let cardNumbers = document.querySelectorAll('.card-number p');
+    for (let i = 0; i < cardNumbers.length; i++) {
+        cardNumbers[i].textContent = '0';
+    }
+
+    let cardName = document.querySelector('.card-name p');
+    cardName.textContent = 'JANE APPLESEED';
+
+    let cardExpDate = document.querySelector('.card-exp-date p');
+    cardExpDate.textContent = '00/00';
+    
+    let cardCVC = document.querySelector('.card-cvc p');
+    cardCVC.textContent = '000';
 });
 
 
