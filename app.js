@@ -56,9 +56,11 @@ inputName.addEventListener('input', function() {
     // Update the cardName text
     if (inputValue) {
         cardName.textContent = inputValue;
+        cardName.style.animation = "slide-up 0.3s ease-out both"
     } else {
         // If the input is empty, set the default name
         cardName.textContent = 'JANE APPLESEED';
+        cardName.style.animation = "none";
     }
 });
 
