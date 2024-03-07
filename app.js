@@ -159,12 +159,14 @@ confirmButton.addEventListener('click', function() {
     }
     if ((inputMonth.value.length === 0) || (inputYear.value.length === 0)) {
         mounthYearError.style.display = "block";
+        mounthYearError.textContent = "Can't be blank";
         isError = true;
     }else {
         mounthYearError.style.display = "none";
     }
     if (inputCVC.value.length === 0) {
         cardCvcError.style.display = "block";
+        cardCvcError.textContent = "Can't be blank";
         isError = true;
     }else {
         cardCvcError.style.display = "none";
