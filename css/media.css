@@ -33,5 +33,24 @@
     }
     .card-back, .card-front {
         left: 40%;
+        width: 300px;
+        height: 165px;
     }
+.card-logo {
+    height: 40%;
+    left: 20px;
+    top: 20px;
+}
+.card-number {
+    & p {
+        font-size: 16px !important;
+    }
+}
+.card-fron-details-name-exp {
+    font-size: 10px !important;
+}
+.card-back .card-back-clone .card-cvc {
+    font-size: 10px;
+    right: 34px;
+}
 }
