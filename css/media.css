@@ -24,12 +24,13 @@
         width: 80%;
         padding-top: 50px;
         position: relative;
-        top: 10%;
+        top: 100px;
     }
 }
 @media (max-width: 668px) {
     .form-main {
         width: 100%;
+        top: 40px;
     }
     .card-back, .card-front {
         left: 40%;

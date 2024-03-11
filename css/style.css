@@ -19,6 +19,7 @@ body {
     & .left-side {
         width: 33.33%;
         height: 100vh;
+        padding: 4px;
         background-image: url("/images/bg-main-desktop.png");
         background-size: cover;
         position: relative;
