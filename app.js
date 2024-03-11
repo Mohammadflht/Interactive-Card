@@ -56,9 +56,11 @@ inputName.addEventListener('input', function() {
     // Update the cardName text
     if (inputValue) {
         cardName.textContent = inputValue;
+        cardName.style.animation = "slide-up 0.3s ease-out both"
     } else {
         // If the input is empty, set the default name
         cardName.textContent = 'JANE APPLESEED';
+        cardName.style.animation = "none";
     }
 });
 
@@ -134,8 +136,7 @@ inputCVC.addEventListener('input', function() {
 
 
 let mounthYearError = document.getElementById('mounthYearError');
-let cardNumberEmptyError = document.getElementById('cardNumberEmptyError');
-let cardNumberFormatError = document.getElementById('cardNumberFormatError');
+let cardNumberError = document.getElementById('cardNumberError');
 let cardCvcError = document.getElementById('cardCvcError');
 let confirmButton = document.getElementById('confirmButton');
 let continueButton = document.getElementById('continueButton');
@@ -145,27 +146,27 @@ let formMain = document.querySelector('.form-main');
 confirmButton.addEventListener('click', function() {
     let isError = false;
     if (!/^[0-9\s]*$/.test(inputNumber.value) || inputNumber.value.length < 19) {
-        cardNumberFormatError.style.display = "block";
-        cardNumberEmptyError.style.display = "none";
+        cardNumberError.style.display = "block";
+        cardNumberError.textContent = "Wrong format, number only";
         isError = true;
     }else {
-        cardNumberFormatError.style.display = "none";
+        cardNumberError.style.display = "none";
     }
     if (inputNumber.value.length === 0) {
-        cardNumberEmptyError.style.display = "block";
-        cardNumberFormatError.style.display = "none";
+        cardNumberError.style.display = "block";
+        cardNumberError.textContent = "Can't be blank";
         isError = true;
-    }else {
-        cardNumberEmptyError.style.display = "none";
     }
     if ((inputMonth.value.length === 0) || (inputYear.value.length === 0)) {
         mounthYearError.style.display = "block";
+        mounthYearError.textContent = "Can't be blank";
         isError = true;
     }else {
         mounthYearError.style.display = "none";
     }
     if (inputCVC.value.length === 0) {
         cardCvcError.style.display = "block";
+        cardCvcError.textContent = "Can't be blank";
         isError = true;
     }else {
         cardCvcError.style.display = "none";
@@ -178,6 +179,7 @@ confirmButton.addEventListener('click', function() {
     }
     
     console.log(isError);
+    console.log(cardNumberError.textContent);
 });
 
 continueButton.addEventListener('click', function() {

@@ -19,6 +19,7 @@ body {
     & .left-side {
         width: 33.33%;
         height: 100vh;
+        padding: 4px;
         background-image: url("/images/bg-main-desktop.png");
         background-size: cover;
         position: relative;
@@ -250,5 +251,16 @@ body {
                 font-weight: 600;
             }
         }
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
